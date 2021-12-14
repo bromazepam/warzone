@@ -192,32 +192,43 @@ const locations = [
 ];
 
 const pin = document.getElementById("ping");
-const jump = document.getElementById("whereTo");
-const map = document.getElementById("map");
-let li = document.createElement("li");
+pin.style.visibility = 'hidden';
 
+const drop = document.getElementById("whereTo");
+const map = document.getElementById("map");
 const IMAGE_WIDTH = 856;
 const IMAGE_HEIGHT = 856;
-pin.style.visibility= 'hidden';
 
-jump.addEventListener("click", () => {
-    //todo make random location non repeating
-    let location = locations[Math.floor(Math.random()*locations.length)];
-    result.innerText = location.name;
+let alreadyDropped = [];
 
-    let nameOfTheLocation = location.name;
-    let liNode = document.createElement("li");
-    let textNode = document.createTextNode(nameOfTheLocation);
-
-    liNode.appendChild(textNode);
-
-    const { x, y, width, height } = map.getBoundingClientRect();
-
-    const scaleX = width / IMAGE_WIDTH;
-    const scaleY = height / IMAGE_HEIGHT;
-
-    pin.style.visibility= 'visible';
-    pin.style.top = `${(location.top * scaleY) + y - (pin.offsetHeight)}px`;
-    pin.style.left = `${(location.left * scaleX) + x - (pin.offsetWidth / 2)}px`;
+drop.addEventListener("click", () => {
+    locate();
 });
 
+function locate() {
+    let location = locations[Math.floor(Math.random() * locations.length)];
+
+    if (alreadyDropped.includes(location) && (alreadyDropped.length !== locations.length)) {
+        locate();
+    } else if (alreadyDropped.length === locations.length) {
+        alreadyDropped = [];
+        locate();
+    } else {
+        alreadyDropped.push(location);
+        result.innerText = location.name;
+
+        let nameOfTheLocation = location.name;
+        let liNode = document.createElement("li");
+        let textNode = document.createTextNode(nameOfTheLocation);
+
+        liNode.appendChild(textNode);
+
+        const {x, y, width, height} = map.getBoundingClientRect();
+        const scaleX = width / IMAGE_WIDTH;
+        const scaleY = height / IMAGE_HEIGHT;
+
+        pin.style.visibility = 'visible';
+        pin.style.top = `${(location.top * scaleY) + y - (pin.offsetHeight)}px`;
+        pin.style.left = `${(location.left * scaleX) + x - (pin.offsetWidth / 2)}px`;
+    }
+}
