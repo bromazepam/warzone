@@ -18,6 +18,7 @@ h5{
     align-items: center;
     color: #fefefe;
     font-family: "Roboto Light";
+    box-sizing: content-box;
 }
 #whereTo {
     background-color: #454545;
@@ -30,7 +31,12 @@ h5{
     border-radius: 5px;
     border: 1px solid black;
     user-select: none;
-    font-size: 1.6em;
+    font-size: 1.69em;
+
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
 #whereTo:hover {
