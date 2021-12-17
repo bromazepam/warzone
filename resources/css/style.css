@@ -1,14 +1,16 @@
 body {
     background-color: black;
+    text-align: center;
 }
 
-h5{
+h5 {
     color: #fefefe;
     margin: 1px auto;
     width: fit-content;
     font-family: "Roboto Light";
 }
-#buttonSection{
+
+#buttonSection {
     display: flex;
     margin: 2px auto;
     margin-top: 10px;
@@ -19,6 +21,7 @@ h5{
     color: #fefefe;
     font-family: "Roboto Light";
 }
+
 #whereTo {
     background-color: #454545;
     /*padding: 5px;*/
@@ -31,30 +34,56 @@ h5{
     border: 1px solid black;
     user-select: none;
     font-size: 1.69em;
-
 }
 
 #whereTo:hover {
     background-color: #686868;
-    border: 1px solid  rgba(242,181,30,255);
+    border: 1px solid rgba(242, 181, 30, 255);
     cursor: pointer;
 }
+
 .map-pin {
     position: absolute;
 }
 
 .location {
-    color: rgba(242,181,30,255);
+    color: rgba(242, 181, 30, 255);
     font-size: 1.7em;
     font-weight: bold;
     display: flex;
 }
 
 .pic {
-    object-fit:scale-down;
+    object-fit: scale-down;
 }
 
-#map{
-    border: 1px solid rgba(242,181,30,255);
+#map {
+    border: 1px solid rgba(242, 181, 30, 255);
     border-radius: 2%
+}
+
+form {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+input {
+    padding: 5px 10px;
+    background-color: #454545;
+    border-radius: 10px;
+    border: 3px solid black;
+    color: rgba(242, 181, 30, 255);
+}
+
+input:hover {
+    background-color: #686868;
+    border: 3px solid rgba(242, 181, 30, 255);
+}
+
+p {
+    color: #d3d3d3;
+    opacity: 0.8;
+    margin-bottom: 5px;
+    font-style: italic;
 }
