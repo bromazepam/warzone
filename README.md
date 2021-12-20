@@ -1,7 +1,7 @@
 # Warzone Pacific random drop location generator
 
 Tired of thinking about places to drop in Warzone Pacific, you've come to the right place. 
-Drop generator currently has 38 different locations, with time I might add more.
+Drop generator currently has 38 different locations scattered all over Caldera, with time I might add more.
 
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://warzone-pacific.netlify.app/)
 
