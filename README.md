@@ -10,5 +10,5 @@ Drop generator currently has 38 different locations, with time I might add more.
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![](https://img.shields.io/badge/JavaScript-%231572B6.svg?style=for-the-badge&logo=javascript&logoColor=white)
 
-#Screenshot
+## Screenshot
 ![Screenshot](./resources/img/wz.gif)
