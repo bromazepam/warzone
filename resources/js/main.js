@@ -20,11 +20,6 @@ const locations = [
         left: 184,
     },
     {
-        name: "Ruins",
-        top: 391,
-        left: 252,
-    },
-    {
         name: "Docks",
         top: 120,
         left: 489,
@@ -55,7 +50,7 @@ const locations = [
         left: 276,
     },
     {
-        name: "Mines",
+        name: "Factory",
         top: 182,
         left: 444,
     },
@@ -118,6 +113,11 @@ const locations = [
         name: "Village",
         top: 467,
         left: 270,
+    },
+    {
+        name: "Storage",
+        top: 396,
+        left: 252,
     },
     {
         name: "Lagoon",
